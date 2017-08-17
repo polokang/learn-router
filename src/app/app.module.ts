@@ -15,7 +15,7 @@ import { JokesComponent } from './jokes/jokes.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes,{enableTracing:true})
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
