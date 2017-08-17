@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -8,16 +7,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(
-    private router:Router
-  ) { 
-    
+  constructor() { 
+
   }
 
   ngOnInit() {
-    this.router.events.subscribe((event)=>{
-      //可以用instanceof来判断事件的类型，然后去做你想要做的事情
-      console.log(event);
-    });
   }
 }
