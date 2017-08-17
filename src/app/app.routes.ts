@@ -1,6 +1,4 @@
 import { RouterModule } from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {JokesComponent} from './jokes/jokes.component';
 
 export const appRoutes=[
     {
@@ -10,14 +8,14 @@ export const appRoutes=[
 	},
     {
         path:'home',
-        component:HomeComponent
+        loadChildren:'./home/home.module#HomeModule'
     },
     {
         path:'jokes',
-        component:JokesComponent
+        loadChildren:'./jokes/jokes.module#JokesModule'
     },
     {
 		path:'**',
-		component:HomeComponent
+		loadChildren:'./home/home.module#HomeModule'
 	}
 ];
