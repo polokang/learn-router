@@ -3,24 +3,28 @@ import { HomeComponent } from './home.component';
 import { PictureComponent } from './picture/picture.component';
 import { TextComponent } from './text/text.component';
 
-export const homeRoutes=[
+export const homeRoutes = [
     {
-		path:'',
-        component:HomeComponent,
-        children:[
+        path: '',
+        component: HomeComponent,
+        children: [
             {
-                path:'',
-                redirectTo:'pictures',
-                pathMatch:'full'
+                path: '',
+                redirectTo: 'pictures',
+                pathMatch: 'full'
             },
             {
-                path:'pictures',
-                component:PictureComponent
+                path: 'pictures',
+                component: PictureComponent
             },
             {
-                path:'text',
-                component:TextComponent
+                path: 'text',
+                component: TextComponent
+            },
+            {
+                path: '**',
+                component: PictureComponent
             }
         ]
-	}
+    }
 ];
